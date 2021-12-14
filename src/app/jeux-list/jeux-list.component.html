@@ -1,0 +1,16 @@
+<h1>Liste de mes jeux-vidéos préférés !</h1>
+<p>Vous trouverez sur cette page tous mes jeux-vidéos préférés !</p>
+
+<a routerLink="/new-jeux">Ajouter un jeu-vidéo</a>
+
+<ul class="list-group" *ngIf="jeu">
+  <app-jeux *ngFor="let jeux of jeu; let i = index"
+            [gameName]="jeux.name"
+            [gameEditor]="jeux.editor"
+            [gameDev]="jeux.dev"
+            [gameCategory]="jeux.category"
+            [gameDate]="jeux.date"
+            [gamePlateformes]="jeux.plateformes"
+            [gameAffiche]="jeux.affiche"
+            [id]="jeux.id"></app-jeux>
+</ul>

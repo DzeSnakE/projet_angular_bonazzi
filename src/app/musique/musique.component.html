@@ -1,0 +1,25 @@
+<li [ngClass]=" {'list-group-item': true}">
+  <div class="row">
+    <div class="col-8">
+      <div class="row">
+        <div class="col-12 col-sm-6">
+          <h3>Titre : {{ musiqueTitre }}</h3>
+        </div>
+        <div class="col-12 col-sm-6">
+          Artiste : {{ musiqueArtiste }} // Durée : {{ musiqueDuree }}min // Album : {{musiqueAlbum}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-6">
+          Lien : {{musiqueLien}} <br>
+          Genre : {{musiqueGenre}}
+        </div>
+      </div>
+      <br>
+    </div>
+    <div class="col-2">
+      <a [routerLink]="['/modif-musique', id]" class="btn btn-warning">M</a>
+      <button class="btn btn-danger" (click)="suppr()">X</button>
+    </div>
+  </div>
+</li>

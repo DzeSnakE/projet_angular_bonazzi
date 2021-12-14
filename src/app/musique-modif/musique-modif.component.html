@@ -1,0 +1,59 @@
+<div class="row change" *ngIf="change">
+  <div class="col-12">
+    Les changements ont bien été enregistrées.
+  </div>
+</div>
+<div *ngIf="musique">
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Titre</label><br>
+        <input type="text" class="form-control" [(ngModel)]="musique.titre">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Album</label><br>
+        <input type="text" class="form-control" [(ngModel)]="musique.album">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Artiste</label><br>
+        <input type="text" class="form-control" [(ngModel)]="musique.artiste">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Durée</label><br>
+        <input type="text" class="form-control" [(ngModel)]="musique.duree">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Lien</label><br>
+        <input type="text" class="form-control" [(ngModel)]="musique.lien">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="form-group">
+        <label>Genre</label><br>
+        <input type="text" class="form-control" [(ngModel)]="musique.genre">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="submit">
+        <button class="btn btn-outline-success" (click)="modifMusique()">Envoyer</button>
+      </div>
+    </div>
+  </div>
+</div>

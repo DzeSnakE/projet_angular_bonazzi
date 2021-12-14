@@ -1,0 +1,15 @@
+<h1>Liste de mes musiques préférées !</h1>
+<p>Vous trouverez sur cette pae toutes mes musiques préférées !</p>
+
+<a routerLink="/new-musique">Ajouter une musique</a>
+
+<ul class="list-group" *ngIf="musiques">
+  <app-musique *ngFor="let musique of musiques; let i = index"
+            [musiqueTitre]="musique.titre"
+            [musiqueAlbum]="musique.album"
+            [musiqueArtiste]="musique.artiste"
+            [musiqueDuree]="musique.duree"
+            [musiqueGenre]="musique.genre"
+            [musiqueLien]="musique.lien"
+            [id]="musique.id"></app-musique>
+</ul>

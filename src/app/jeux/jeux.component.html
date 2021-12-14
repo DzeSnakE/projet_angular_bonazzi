@@ -1,0 +1,31 @@
+<li [ngClass]=" { 'list-group-item': true}">
+  <div class="row">
+    <div class="col-2">
+      <img class="affiche img-fluid img-responsive" [src]="gameAffiche">
+    </div>
+    <div class="col-8">
+      <div class="row">
+        <div class="col-12 col-sm-6">
+          <h3 [ngStyle]="{color: changeColor()}" >{{ gameName }}</h3>
+        </div>
+        <div class="col-12 col-sm-6">
+          Date: {{ gameDate }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-sm-6">
+          Studio de développement : {{gameDev}} <br>
+          Éditeur : {{gameEditor}}
+        </div>
+        <div class="col-12 col-sm-6">
+          Plateformes : {{gamePlateformes}} <br>
+          Catégories : {{gameCategory}}
+        </div>
+      </div>
+      <br>
+    </div>
+    <div class="col-2">
+      <a [routerLink]="['/modif-jeux', id]" class="btn btn-warning">M</a>
+      <button class="btn btn-danger" (click)="suppr()">X</button>
+    </div>
+  </div>

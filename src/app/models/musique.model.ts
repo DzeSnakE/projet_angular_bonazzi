@@ -6,6 +6,7 @@ export class Musique {
   duree: string;
   lien: string;
   genre: string;
+  mp3: null;
 
   constructor() {
     this.titre = '';
@@ -14,5 +15,6 @@ export class Musique {
     this.duree = '';
     this.lien = '';
     this.genre = '';
+    this.mp3;
   }
 }

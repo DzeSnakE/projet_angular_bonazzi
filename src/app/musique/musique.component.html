@@ -11,8 +11,12 @@
       </div>
       <div class="row">
         <div class="col-12 col-sm-6">
-          Lien : {{musiqueLien}} <br>
-          Genre : {{musiqueGenre}}
+          Genre : {{musiqueGenre}} <br>
+          Audio : <br> <audio src="{{musiqueMp3}}" controls></audio>
+        </div>
+        <div class="col-12 col-sm-6">
+          Video : <object width="425" height="344" data="{{musiqueLien}}"></object>
+          Lien : {{musiqueLien}}
         </div>
       </div>
       <br>

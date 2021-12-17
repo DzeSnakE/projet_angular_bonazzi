@@ -13,6 +13,7 @@ export class MusiqueComponent implements OnInit {
   @Input() musiqueDuree?: string;
   @Input() musiqueLien?: string;
   @Input() musiqueGenre?: string;
+  @Input() musiqueMp3?: null;
   @Input() id?: string;
 
   constructor(

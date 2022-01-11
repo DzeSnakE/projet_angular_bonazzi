@@ -1,16 +1,18 @@
-<h1>Liste de mes musiques préférées !</h1>
-<p>Vous trouverez sur cette pae toutes mes musiques préférées !</p>
+<div style="text-align: center">
+  <h1>Liste de mes musiques préférées !</h1>
+  <p>Vous trouverez sur cette page toutes mes musiques préférées !</p>
+</div>
 
-<a routerLink="/new-musique">Ajouter une musique</a>
+<a routerLink="/new-musique" class="btn btn-success">Ajouter une musique</a><br><br>
 
 <ul class="list-group" *ngIf="musiques">
   <app-musique *ngFor="let musique of musiques; let i = index"
-            [musiqueTitre]="musique.titre"
-            [musiqueAlbum]="musique.album"
-            [musiqueArtiste]="musique.artiste"
-            [musiqueDuree]="musique.duree"
-            [musiqueGenre]="musique.genre"
-            [musiqueLien]="musique.lien"
-            [musiqueMp3]="musique.mp3"
-            [id]="musique.id"></app-musique>
+               [musiqueTitre]="musique.titre"
+               [musiqueAlbum]="musique.album"
+               [musiqueArtiste]="musique.artiste"
+               [musiqueDuree]="musique.duree"
+               [musiqueGenre]="musique.genre"
+               [musiqueLien]="musique.lien"
+               [musiqueMp3]="musique.mp3"
+               [id]="musique.id"></app-musique>
 </ul>

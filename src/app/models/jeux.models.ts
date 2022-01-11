@@ -7,6 +7,7 @@ export class Jeux {
   date: string;
   plateformes: string;
   affiche: string;
+  lien: string;
 
   constructor() {
     this.name = '';
@@ -16,6 +17,7 @@ export class Jeux {
     this.date = '';
     this.plateformes = '';
     this.affiche = '';
+    this.lien = '';
 
   }
 }

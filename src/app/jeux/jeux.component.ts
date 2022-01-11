@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {JeuxService} from "../services/jeux/jeux.service";
+import {DomSanitizer, SafeResourceUrl} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-jeux',
@@ -16,9 +17,8 @@ export class JeuxComponent implements OnInit {
   @Input() gameAffiche?: string;
   @Input() id?: string;
 
-
   constructor(
-    private Jeux: JeuxService
+    private Jeux: JeuxService,
   ) { }
 
   ngOnInit(): void {

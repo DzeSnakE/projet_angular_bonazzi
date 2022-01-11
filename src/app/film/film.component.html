@@ -1,50 +1,40 @@
-<li [ngClass]=" { 'list-group-item': true,
-'list-group-item-info': filmOnAir == true,
-'list-group-item-warning': filmOnAir == false }">
-  <div class="row">
-    <div class="col-2">
+<li class="alert alert-light" [ngClass]=" { 'list-group-item': true}">
+  <div>
+    <div style="text-align: center ">
       <img class="affiche img-fluid img-responsive" [src]="filmAffiche">
     </div>
-    <div class="col-8">
-      <div class="onAir" *ngIf="filmOnAir == false">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Blu-ray_Disc.svg/1200px-Blu-ray_Disc.svg.png">
-      </div>
-      <div class="onAir" *ngIf="filmOnAir == true">
-        <img src="https://fr.web.img3.acsta.net/r_654_368/newsv7/21/04/29/14/22/0010719.jpg">
-      </div>
-      <div class="row">
-        <div class="col-12 col-sm-6">
-          <h3 [ngStyle]="{color: changeColor()}" >Film : {{ filmName }}</h3>
+    <div class="alert alert-dark" style="text-align: center">
+      <div>
+        <div class="alert alert-primary" style="text-align: center">
+          <h3>Film : {{ filmName }}</h3>
         </div>
-        <div class="col-12 col-sm-6">
+        <div>
           Date: {{ filmReleaseDate }} // Durée : {{ filmTime }}min // Pays: {{filmCountry}}
         </div>
       </div>
-      <div class="row">
-        <div class="col-12 col-sm-6">
+      <div>
+        <div>
           Producteur: {{filmProductor}} <br>
           Realisateur: {{filmRealisator}}
         </div>
-        <div class="col-12 col-sm-6">
+        <div>
           Scénariste: {{filmScenario}} <br>
           Musique: {{filmMusic}}
         </div>
       </div>
       <br>
-      <div class="row">
-        <div class="col-12">
+      <div>
+        <div class="alert alert-info">
           Résumé: <br>
-          <div class="text-justify">
+          <div>
             {{filmSynopsis}}
           </div>
         </div>
       </div>
-      <button class="btn btn-outline-success" (click)="onWatchFilm()">Regarder</button> <br>
-      <button class="btn btn-outline-info" (click)="onSwitch()">Switch</button>
     </div>
-    <div class="col-2">
-      <a [routerLink]="['/modif', id]" class="btn btn-warning">M</a>
-      <button class="btn btn-danger" (click)="suppr()">X</button>
+    <div style="text-align: right">
+      <a [routerLink]="['/modif', id]" class="btn btn-primary">Modifier</a>
+      <button  class="btn btn-danger" (click)="suppr()">Supprimer</button>
     </div>
   </div>
 </li>

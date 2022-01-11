@@ -1,7 +1,8 @@
-<h1>Liste de mes jeux-vidéos préférés !</h1>
-<p>Vous trouverez sur cette page tous mes jeux-vidéos préférés !</p>
-
-<a routerLink="/new-jeux">Ajouter un jeu-vidéo</a>
+<div style="text-align: center">
+  <h1>Liste de mes jeux-vidéos préférés !</h1>
+  <p>Vous trouverez sur cette page tous mes jeux-vidéos préférés !</p>
+</div>
+<a routerLink="/new-jeux" class="btn btn-success">Ajouter un jeu-vidéo</a><br><br>
 
 <ul class="list-group" *ngIf="jeu">
   <app-jeux *ngFor="let jeux of jeu; let i = index"

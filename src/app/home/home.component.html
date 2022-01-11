@@ -1,6 +1,51 @@
 <h1>Bienvenue sur mon site !</h1>
 
 <p>Vous retrouverez dans ce site plusieurs parties : </p>
-<p> - Une partie avec mes films préférés (je ne compte pas cette partie dans le projet, seulement pour la culture du cinéma :) )</p>
+<br>
+<div style="display: flex">
+  <div id="slider">
+    <figure>
+      <img src="/assets/18686447.jpg" alt>
+      <img src="/assets/233032.jpg" alt>
+      <img src="/assets/385506.jpg" alt>
+      <img src="/assets/19123474.jpg" alt>
+      <img src="/assets/19255605.jpg" alt>
+    </figure>
+  </div>
+<p style="text-align: right"> - Une partie avec mes films préférés (je ne compte pas cette partie dans le projet, c'est seulement pour vous partager ma culture cinématographique :) )</p>
+</div>
+<br>
+<div>
 <p> - Une partie avec mes jeux vidéos préférés</p>
-<p> - Une partie avec mes musique préférés</p>
+</div>
+<br>
+<div>
+<p style="text-align: right;"> - Une partie avec mes musique préférés</p>
+</div>
+
+<style>
+  @keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+  }
+
+  body { margin: 0; }
+  div#slider { overflow: hidden; width: 200px; height: 300px }
+  div#slider figure img { width: 20%; float: left; }
+  div#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 10s slidy infinite;
+  }
+</style>

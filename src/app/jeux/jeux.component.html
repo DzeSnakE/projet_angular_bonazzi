@@ -1,31 +1,31 @@
-<li [ngClass]=" { 'list-group-item': true}">
-  <div class="row">
-    <div class="col-2">
-      <img class="affiche img-fluid img-responsive" [src]="gameAffiche">
+<li class="alert alert-light" [ngClass]=" { 'list-group-item': true}">
+  <div>
+    <div style="text-align: center ">
+      <img class="affiche img-fluid img-responsive" style="height: 300px; width: 200px" [src]="gameAffiche">
     </div>
-    <div class="col-8">
-      <div class="row">
-        <div class="col-12 col-sm-6">
-          <h3 [ngStyle]="{color: changeColor()}" >{{ gameName }}</h3>
+    <div  class="alert alert-dark" style="text-align: center">
+      <div>
+        <div class="alert alert-primary" style="text-align: center">
+          <h3>{{ gameName }}</h3>
         </div>
-        <div class="col-12 col-sm-6">
+        <div>
           Date: {{ gameDate }}
         </div>
       </div>
-      <div class="row">
-        <div class="col-12 col-sm-6">
+      <div>
+        <div>
           Studio de développement : {{gameDev}} <br>
           Éditeur : {{gameEditor}}
         </div>
-        <div class="col-12 col-sm-6">
+        <div class="alert alert-info">
           Plateformes : {{gamePlateformes}} <br>
           Catégories : {{gameCategory}}
         </div>
       </div>
       <br>
     </div>
-    <div class="col-2">
-      <a [routerLink]="['/modif-jeux', id]" class="btn btn-warning">M</a>
-      <button class="btn btn-danger" (click)="suppr()">X</button>
+    <div style="text-align: right">
+      <a [routerLink]="['/modif-jeux', id]" class="btn btn-primary">Modifier</a>
+      <button  class="btn btn-danger" (click)="suppr()">Supprimer</button>
     </div>
   </div>
